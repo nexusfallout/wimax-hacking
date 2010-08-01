@@ -1,0 +1,62 @@
+Motorola CPEi 25150 Rev. A, (0509)
+    MCU: TI TNETV1061
+	http://focus.ti.com/general/docs/bcg/bcgprodcontent.tsp?templateId=6116&navigationId=12653&contentId=14628
+	http://focus.ti.com/pdfs/vf/bband/tnetv1060_datasheet.pdf
+    Flash: Spansion S29GL256P (32MB)
+    	http://www.spansion.com/products/S29GL256P.html
+	http://www.spansion.com/datasheets/s29gl-p_00_a11_e.pdf
+    RAM: Micron MT46V32M16 (BN?-5B F) (64MB 200MHz DDR SDRAM)
+	http://www.micron.com/products/partdetail?part=MT46V32M16BN-5B
+    	http://download.micron.com/pdf/datasheets/dram/ddr/512MBDDRx4x8x16.pdf
+    XCVR: Beceem BCS200 (IEEE 802.16e/WiMAX/WiBRO, 2.3/2.5/3.5GHz, 33Mbps)
+    	http://www.beceem.com/products/bcs200.shtml
+	http://www.beceem.com/products/BCS200_prodbrief.pdf
+    Misc:
+	LinkCom LAN1052 (10/100Base-Tx Magnetics Module)
+	    http://www.linkcommfg.com/u1/v1/w1/2_19_2009-7_34_45_PM-LAN1052-50__SPEC.pdf
+	Realtek RTL8201CP (10/100BaseT Ethernet interface)
+	    http://realtek.info/pdf/rtl8201cp.pdf
+	Atmel AT25256AN-10SU-2.7 (256K Serial EEPROM)
+	    http://www.atmel.com/dyn/resources/prod_documents/doc3368.pdf
+	TI SN74LV126A (Quad Bus Buffer Gates with 3-State Outputs)
+	    http://www.ti.com/lit/gpn/sn74lv126a
+	Sirenza Microdevices SZM-2066Z (2.4-2.7GHz 2W Power Amplifier)
+	    http://www.rfmd.com/
+	Microchip TC620CCOA (Temperature Sensor IC)
+	    http://ww1.microchip.com/downloads/en/devicedoc/21439b.pdf
+    Under Shields:
+	SH1	BBIC: BCSB200 & 16MB? RAM: Micron (5VFI 8XA41 D9FQN)
+	SH2	RFIC: BCSR200
+	SH3	TX1 (N3? SOT-86 Gain Block MMIC Amplifier)
+	SH4	TX1 (SZM-2066Z & TC620CCOA)
+	SH5	RX1 (70ID)
+	SH6	RX2 (70ID)
+	SH7	2 Crystals (for TNETV1061)
+	SH8	RTL8201CP & 25MHz Crystal
+	SH9	40MHz crystal (for BCSR200)
+	SH10	2x LAN1052
+    Connectors
+	J3 Power (FoxConn DC Power Jack Connector)
+	J4 Telephony (2x RJ14)
+	J5 ??? (6 pins, near NotPlaced telephony parts)
+	    2	VCC
+	    6	GND
+	J6 EEPROM write enable/disable?		(Molex:0683011054 Harwin:M20-8770246 FCI:54201-S0802LF)
+	    1	Bus Buffer 3OE--|>-,
+	    			---|>--3Y -> AT25256AN SDI (Serial Data Input)
+	    2	GND
+	J7 Serial Console	(Molex:878980426 Harwin:M20-8770446 FCI:95293-401-04LF Tyco/AMP:1241150-4 Samtec:TSM-104-01-S-SV)
+	    1	VCC
+	    2	GND
+	    3	TX
+	    4	RX
+	J8 EJTAG	(Molex:15912140 Harwin:M20-8761446 FCI:95278-101A14LF Tyco/AMP:1241050-7 Samtec:TSM-107-01-S-DV)
+	    http://www.jtagtest.com/pinouts/ejtag
+	J9 RF TX1 U.FL connector pads	(Hirose:U.FL-R-SMT(01) Molex:73412-0110 Emerson:128-0711-201)
+	J10 RF TX1/RX1 Murata SWD switch connector (MM8430-2610)	(order test cable: MXHS83QE3000)
+	J11 RF RX2 Murata SWD switch connector (MM8430-2610)
+	J12 RF RX1 U.FL connector pads
+	J13 RF RX2 U.FL connector pads
+	J15 RF RX1/TX1 7mm (SMA?) ext ant pads
+	J16 RF RX2 7mm (SMA?) ext ant pads
+	J17 ??? (8 pins, near BCSR200)

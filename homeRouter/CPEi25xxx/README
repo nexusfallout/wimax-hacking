@@ -1,0 +1,46 @@
+Before you run unlock.sh, you should know that it will brik your device
+unless you are very, very lucky.  You may exchange some preparation
+time for luck by verifying that you have the following:
+
+- OpenOCD version 0.5.0-dev-00183-gdecad30 (2010-04-14-17:41)
+- screen
+- nc.traditional
+- read/write access to your serial device (default /dev/ttyUSB0)
+- read/write access to your parallel device (/dev/lp0 for JTAG, or
+	configure openocd to use something else)
+
+Once you have that all installed, do some testing.  To test openocd,
+run it from this directory without arguments like so:
+
+    $ openocd
+
+And that will start up the daemon which provides output like the
+following if your device is connected and all is well:
+
+    Open On-Chip Debugger 0.5.0-dev-00183-gdecad30 (2010-04-14-17:41)
+    Licensed under GNU GPL v2
+    For bug reports, read
+	    http://openocd.berlios.de/doc/doxygen/bugs.html
+    parport port = 0x0
+    srst_only separate srst_gates_jtag srst_push_pull
+    Info : clock speed 500 kHz
+    Info : JTAG tap: tnetv1061.cpu tap/device found: 0x1b6c602f (mfg: 0x017, part: 0xb6c6, ver: 0x1)
+
+Now you can connect to the daemon via telnet like this:
+
+    $ telnet localhost 4444
+    Open On-Chip Debugger
+    >
+
+And then do stuff like reset, initialize, and peek at a few addresses:
+
+    > reset init
+    JTAG tap: tnetv1061.cpu tap/device found: 0x1b6c602f (mfg: 0x017, part: 0xb6c6, ver: 0x1)
+    target state: halted
+    target halted in MIPS32 mode due to debug-request, pc: 0xbfc00000
+    > mdw 0xB0020000 16
+    0xb0020000: 4e454954 382e3056 ffffff00 ffffffff fd6eff20 64783001 ff003134 ffffffff 
+    0xb0020020: fcd1ff02 30783001 30303034 00303030 fcd2ff03 30783001 30303032 00303030 
+
+Once you really think you are ready you can get on with the bricking:
+    $ ./unlock [serial device]
