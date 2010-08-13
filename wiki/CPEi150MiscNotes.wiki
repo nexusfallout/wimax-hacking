@@ -1,3 +1,9 @@
 #summary Misc notes on the CPEi 150
 
 it will allow you to load any root cert, as long as it is in DER format (not PEM)
+
+Engineering Menu:
+move your mouse over the device image, then hold ctrl+shift+e and click
+
+Software Menu:
+move your mouse over the device image, then hold ctrl+alt+h
