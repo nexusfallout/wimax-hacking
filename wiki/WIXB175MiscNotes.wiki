@@ -1,0 +1,3 @@
+Engineering Menu: move your mouse over the device image, then hold ctrl+shift+e and click
+
+Software Menu: move your mouse over the device image, then hold ctrl+alt+h
