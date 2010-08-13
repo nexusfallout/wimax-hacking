@@ -1,0 +1,3 @@
+#summary Misc notes on the CPEi 150
+
+it will allow you to load any root cert, as long as it is in DER format (not PEM)
