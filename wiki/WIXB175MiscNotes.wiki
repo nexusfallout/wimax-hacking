@@ -10,6 +10,10 @@
   # using the LFI above, get /etc/hosts
   # your command will be run, and you should see your results
 
+== Software Unlock (enable telnet) ==
+  # Using the above Remote Command execution trick, run the command: {{{ fw_setenv factory 1 }}}
+  # reboot, and you can telnet right in.
+
 == Filesystem ==
   * /mnt/jffs2/conf/app/lighttpd.conf
   * /mnt/jffs2/conf/app/ipkg.conf
