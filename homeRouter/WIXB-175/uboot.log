@@ -1,0 +1,35 @@
+U-Boot 1.1.6 (Jan 29 2010 - 15:12:05) $Name: 01.00.09.1000 (Gemtek) $
+
+DRAM:  64 MB
+REF_CLK_24M 
+NVMs_1PNOR
+Flash: 32 MB
+In:    serial
+Out:   serial
+Err:   serial
+Reserve MSP memory
+Net:   In vsc7385 init
+No Vitesse chip found 0
+Disabling Vitesse Switch. PhyAutoNegFlag = 1
+maya_gemac1, maya_gemac0
+Hit any key to stop autoboot:  0 
+## Starting application at 0x81D00000 ...
+read from [0x200c0000], search file [/etc/img/uImage], write to [0x81000000]
+This file system use block size: 131072
+|UWRWRWUWUWUWRWRWRWUWUWUW|
+## Application terminated, rc = 0x0
+
+
+u-boot cmd: bootm
+## Booting image at 81000000 ...
+   Image Name:   Linux-2.6.21.1
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1495944 Bytes =  1.4 MB
+   Load Address: 81408000
+   Entry Point:  81408000
+   Verifying Checksum ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux................................................................................................ done, booting the kernel.
