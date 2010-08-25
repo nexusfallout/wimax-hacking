@@ -20,3 +20,6 @@
   * /mnt/jffs2/conf/app/ipkg.conf
   * /bin/ipkg_verify.sh
   * /etc/conf/app/pubkey
+
+== Missing busybox functions ==
+just download http://www.busybox.net/downloads/binaries/1.16.0/busybox-armv4l to the modem, then use it.  It is a pre-built busybox binary that contains all the normal functions.
