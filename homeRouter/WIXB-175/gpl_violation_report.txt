@@ -1,0 +1,133 @@
+Precise Name of Product:
+	CLEAR WIXB-175 Series G, rebranded Gemtek WIXB-175, based on the Beceem BCS 5200 reference implementation
+
+Organizations Distributing it:
+	Distributes customized devices to end user customers
+	Clear LLC
+	4400 Carillon Point
+	Kirkland, WA 98033
+	(888) 888-3113
+	http://www.clear.com
+	
+	OEM that designed the device, based on a reference design
+	GemTek
+	No.15-1 Zhonghua Road
+	Hsinchu Industrial Park
+	Hukou,Hsinchu, 30352
+	Taiwan (R.O.C.)
+	Tel:+ 886-3-598-5535
+	Fax:+ 886-3-598-5585
+	http://www.gemtek.com.tw
+	
+	Chipset designer and supposed author of infringing code
+	Beceem
+	3960 Freedom Circle, Floor 1
+	Santa Clara, CA 95054 USA 
+	Main: + 1 408-387-5000 
+	Fax: +1 408-387-5099
+	http://www.beceem.com/
+
+Exact name of package who's rights are violated:
+	BusyBox v1.4.2
+	GNU Wget 1.11.4
+	Dnsmasq version 2.41
+	ebtables v2.0.8-rc3
+	ez-ipupdate 3.0.11b8
+	ipkg 0.99.163
+	OpenWRT 2.0
+	mtd
+	Linux 2.6.21.1
+	
+How license was violated:
+	Is the copyright notice of the copyright holder included?
+		The notice is included in the compiled binaries, as well as in some configuration file on the device
+	Is the source code completely missing?
+		Yes, it is completely missing.
+	Is there a written offer for source that's incomplete in some way? This could happen if it provides a contact address or network URL that's somehow incorrect.
+		There is no written offer for source.
+	Is there a copy of the license included in the distribution?
+		There does not seem to be a copy of the license on the device, and there is not one included in the documentation
+	Is some of the source available, but not all? If so, what parts are missing?
+		No, none of the source is included.
+
+Additional information:
+I have politely requested a copy of source code, with no response after a two week wait.
+My personal backup of the flash memory dump form my device: http://code.google.com/p/wimax-hacking/source/browse/trunk/homeRouter/WIXB-175/mtd_dump/
+I can provide contents of specific files on request (such as, perhaps, the actual busybox binary on the device).
+
+
+root@BCS5200:/bin# busybox
+BusyBox v1.4.2 (2010-05-17 15:25:14 CST) multi-call binary
+Copyright (C) 1998-2006  Erik Andersen, Rob Landley, and others.
+Licensed under GPLv2.  See source distribution for full notice.
+
+Usage: busybox [function] [arguments]...
+   or: [function] [arguments]...
+
+        BusyBox is a multi-call binary that combines many common Unix
+        utilities into a single executable.  Most people will create a
+        link to busybox for each function they wish to use and BusyBox
+        will act like whatever it was invoked as!
+
+Currently defined functions:
+        [, [[, ash, awk, awx, cat, chmod, chown, clear, cp, crond, crontab, cut, date, dmesg, echo, egrep,
+        env, expr, false, fgrep, find, free, grep, halt, head, hexdump, hostid, hostname, ifconfig, init, insmod,
+        kill, killall, klogd, less, ln, lock, logger, logread, ls, lsmod, mkdir, mknod, mount, mv, netstat,
+        passwd, pidof, ping, pivot_root, poweroff, ps, pwd, rdate, realpath, reboot, rm, rmdir, rmmod, route,
+        run-parts, sed, sh, sleep, stat, switch_root, sync, sysctl, syslogd, tail, tar, tee, telnet, telnetd,
+        test, tftp, time, top, touch, traceroute, true, tty, umount, uname, uptime, usleep, vconfig, watchdog,
+        wc, xargs, yes
+
+root@BCS5200:/bin# dnsmasq --version
+Dnsmasq version 2.41  Copyright (C) 2000-2008 Simon Kelley
+Compile time options IPv6 GNU-getopt no-ISC-leasefile no-DBus no-I18N TFTP
+
+This software comes with ABSOLUTELY NO WARRANTY.
+Dnsmasq is free software, and you are welcome to redistribute it
+under the terms of the GNU General Public License, version 2 or 3.
+
+root@BCS5200:/bin# ebtables --version
+ebtables v2.0.8-rc3 (December 2006)
+
+root@BCS5200:/bin# ez-ipupdate --version
+ez-ipupdate: - 3.0.11b8 - $Id: ez-ipupdate.c,v 1.48 2001/07/17 00:49:41 amackay Exp $
+
+root@BCS5200:/bin# ipkg --version
+ipkg version 0.99.163
+
+root@BCS5200:/bin# cat /etc/banner 
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+
+BECEEM COMMUNICATIONS - Build v2.3.8
+ ---------------------------------------------------
+
+root@BCS5200:/etc# cat diag.sh 
+#!/bin/sh
+# Copyright (C) 2006 OpenWrt.org
+
+set_state() :
+
+root@BCS5200:/bin# mtd
+Usage: mtd [<options> ...] <command> [<arguments> ...] <device>
+
+The device is in the format of mtdX (eg: mtd4) or its label.
+mtd recognizes these commands:
+        unlock                  unlock the device
+        erase                   erase all data on device
+        write <imagefile>|-     write <imagefile> (use - for stdin) to device
+Following options are available:
+        -q                      quiet mode (once: no [w] on writing,
+                                           twice: no status messages)
+        -r                      reboot after successful command
+        -f                      force write without trx checks
+        -e <device>             erase <device> before executing the command
+
+Example: To write linux.trx to mtd4 labeled as linux and reboot afterwards
+         mtd -r write linux.trx linux
+
+root@BCS5200:/bin# uname -a
+Linux BCS5200 2.6.21.1 #1 Mon May 17 15:20:27 CST 2010 armv6l unknown
