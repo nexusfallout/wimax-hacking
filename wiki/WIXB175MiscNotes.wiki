@@ -29,28 +29,10 @@ just download http://www.busybox.net/downloads/binaries/1.16.0/busybox-armv4l to
 _thanks to Panic_
 
 To disassemble: 
-  * Remove two T6 screws located under the round black feet on the 
-bottom. 
-  * Remove the colored piece from the right side of the case. On the 
-clear modem this piece is black and has neither the logo on it nor the 
-lights on it. To remove, use a credit card to pop it off. Begin along 
-the vented portion at the top, move slowly along the edges starting 
-from here, releasing the clips as you go. There are a three clips 
-located in the center of this panel so some pulling will be required 
-once the edges release to remove it. Note that you do not need to 
-remove the left side panel to disassemble the modem -- in fact it 
-appears that a few of the posts have been fused to help hold it in 
-place. 
-  * Remove the three T8 screws from under the panel removed in the 
-previous step. 
-  * Split the two halves of the modem using a credit card. This seemed 
-to work best by beginning near the ports at the back and working 
-outward from there. The clips are pretty heavy and require some force 
-to release. There are two built into the bottom plastic. There are two 
-minor clips near ports and two major clips on this side at the top. 
-There are 3 major clips at the top. Two major clips on the front top 
-curve. Three major clips on the front. Most of these should be 
-identifiable in the FCC photos. 
+  * Remove two T6 screws located under the round black feet on the bottom. 
+  * Remove the colored piece from the right side of the case. On the clear modem this piece is black and has neither the logo on it nor the lights on it. To remove, use a credit card to pop it off. Begin along the vented portion at the top, move slowly along the edges starting from here, releasing the clips as you go. There are a three clips located in the center of this panel so some pulling will be required once the edges release to remove it. Note that you do not need to remove the left side panel to disassemble the modem -- in fact it appears that a few of the posts have been fused to help hold it in place.
+  * Remove the three T8 screws from under the panel removed in the previous step. 
+  * Split the two halves of the modem using a credit card. This seemed to work best by beginning near the ports at the back and working outward from there. The clips are pretty heavy and require some force to release. There are two built into the bottom plastic. There are two minor clips near ports and two major clips on this side at the top. There are 3 major clips at the top. Two major clips on the front top curve. Three major clips on the front. Most of these should be identifiable in the FCC photos. 
 
 
 Note that you need to be careful of the antenna and its cables when 
