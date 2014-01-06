@@ -98,9 +98,9 @@ proc first_step {start} {
 # Poke small code chunk into a useful address space and verify.
 proc poke_code {address code name} {
     set length [expr [llength $code] / 2]
-    ocd_array2mem code 32 $address $length
+    array2mem code 32 $address $length
     sleep 5
-    ocd_mem2array verify_code 32 $address $length
+    mem2array verify_code 32 $address $length
     if {[arraysmatch $code $verify_code] != 1} {
 	puts "Failed to write $name"
 
