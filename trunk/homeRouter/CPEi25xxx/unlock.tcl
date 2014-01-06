@@ -20,13 +20,13 @@ reset init
 set offset_fixed 0
 foreach offset $offset_list {
     set address_CONSOLE_STATE [expr $address_bootloader + $offset]
-    ocd_mem2array verify_CONSOLE_STATE 32 $address_CONSOLE_STATE [expr [llength $expect_CONSOLE_STATE] / 2]
+    mem2array verify_CONSOLE_STATE 32 $address_CONSOLE_STATE [expr [llength $expect_CONSOLE_STATE] / 2]
     if {[arraysmatch $expect_CONSOLE_STATE $verify_CONSOLE_STATE] == 1} {
 	puts "### Found CONSOLE_STATE.  Changing to unlocked..."
 	copy_to_ram $address_bootloader $address_buffer 0x20000
 
 	# alter the buffer
-	ocd_array2mem set_CONSOLE_STATE 32 [expr $address_buffer + $offset] [expr [llength $set_CONSOLE_STATE] / 2]
+	array2mem set_CONSOLE_STATE 32 [expr $address_buffer + $offset] [expr [llength $set_CONSOLE_STATE] / 2]
 	mdb [expr $address_buffer + $offset] [expr [llength $set_CONSOLE_STATE] / 2 * 4]
 
 	copy_to_flash $address_buffer $address_bootloader 0x20000
@@ -73,7 +73,7 @@ puts "###"
 partial_boot 13000
 puts "### Halting mid boot to switch back to orriginal config."
 save_registers
-ocd_mem2array save_code 32 $address_code 30
+mem2array save_code 32 $address_code 30
 if {[verify_blank $address_sneaky_ram 0x1800] != 1} {
     set address_sneaky_ram $address_sneaky_ram_alt
     if {[verify_blank $address_sneaky_ram 0x1800] != 1} {
@@ -88,7 +88,7 @@ puts "### Cleaning up from bootloader config shuffle."
 erase_sector $address_sneaky_flash
 zero_ram $address_sneaky_ram 0x1800
 puts "### Cleaning up registers and stuff."
-ocd_array2mem save_code 32 $address_code 30
+array2mem save_code 32 $address_code 30
 restore_registers
 puts "### Resuming boot like nothing happened.  (Ninja Vanish)"
 resume
